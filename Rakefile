@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bio-img_metadata"
   gem.homepage = "http://github.com/wwood/bioruby-img_metadata"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Reads metadata from Integrated Microbial Genomes (IMG) metadata files into a programmaticly useful state}
+  gem.description = %Q{Reads metadata from Integrated Microbial Genomes (IMG) metadata files into a programmaticly useful state.}
   gem.email = "donttrustben near gmail.com"
   gem.authors = ["Ben J. Woodcroft"]
   # dependencies defined in Gemfile
