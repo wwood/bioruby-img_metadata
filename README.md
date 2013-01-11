@@ -15,12 +15,12 @@ gem install bio-img_metadata
 ```ruby
 require 'bio-img_metadata'
 
-d = Bio::IMG::TaxonomyDefinitionFile.read(File.join DATA_DIR, 'head.metadata.csv') #=> an Array of Bio::IMG::TaxonomyDefinitionFile objects
+d = Bio::IMG::Metadata.read(File.join DATA_DIR, 'head.metadata.csv') #=> an Array of Bio::IMG::Metadata objects
 
 d.length.should == 9 #=> The array has 9 members, one for each line in the metadata file
 d[0].kind_of?(Bio::IMG::Lineage).should == true #=> Each lineage's object
 
-d[0].domain.should == 'Archaea' #=> some attributes are now methods (the taxonomy-related ones)
+d[0].domain.should == 'Archaea' #=> some attributes are now methods (mostly the taxonomy-related ones)
 d[1].taxon_id.should == 2515075008
 
 d[0].attributes['Status'].should == 'Finished' #=> the rest are in the attributes array
