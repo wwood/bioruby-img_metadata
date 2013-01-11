@@ -13,4 +13,8 @@ describe "BioImgMetadata" do
     d[0].attributes['Status'].should == 'Finished'
     d[1].taxon_id.should == 2515075008
   end
+  
+  it 'should have class equivalency TaxonomyDefinitionFile, MetadataFile' do
+    Bio::IMG::TaxonomyDefinitionFile.should == Bio::IMG::Metadata
+  end
 end

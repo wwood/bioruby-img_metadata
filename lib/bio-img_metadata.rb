@@ -22,7 +22,7 @@ module Bio
     # Acts like an array of Bio::IMG::Lineage objects
     #
     # Use TaxonomyDefinitionFile#read to read in a file downloaded through the IMG export system
-    class TaxonomyDefinitionFile < Array
+    class Metadata < Array
       FIELD_NAMES_TO_CLASSIFICATIONS = {
         'taxon_oid' => :taxon_id,
         'Domain' => :domain,
@@ -101,5 +101,7 @@ module Bio
         return hash
       end
     end
+    
+    TaxonomyDefinitionFile = Metadata #Some backwards compatibility
   end
 end
